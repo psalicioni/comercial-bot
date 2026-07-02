@@ -1,0 +1,13 @@
+{
+  "name": "comercial-bot",
+  "version": "1.0.0",
+  "description": "Bot interno de consultas comerciales sobre reportes de Tango y Power BI",
+  "private": true,
+  "scripts": {
+    "convert": "node scripts/convert-report.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.27.0",
+    "xlsx": "^0.18.5"
+  }
+}
