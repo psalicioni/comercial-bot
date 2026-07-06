@@ -72,9 +72,6 @@
     padding: 32px 16px;
   }
 
-  /* ============================================================
-     LOGIN
-     ============================================================ */
   .login {
     max-width: 360px;
     margin: 80px auto 0;
@@ -84,27 +81,12 @@
     padding: 32px;
     box-shadow: var(--shadow-md);
   }
-  .login h1 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  .login p {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-  }
-  .input-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-  }
+  .login h1 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+  .login p { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+  .input-wrap { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
   label {
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    font-size: 12px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.06em;
     color: var(--text-muted);
   }
   input[type="password"] {
@@ -118,13 +100,8 @@
     outline: none;
     transition: border-color 0.15s;
   }
-  input[type="password"]:focus {
-    border-color: var(--accent);
-  }
+  input[type="password"]:focus { border-color: var(--accent); }
 
-  /* ============================================================
-     PANEL
-     ============================================================ */
   .section {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -147,32 +124,13 @@
     margin-bottom: 4px;
   }
 
-  .status-empty {
-    color: var(--text-muted);
-    font-size: 14px;
-    padding: 12px 0;
-  }
-  .status-loaded {
-    font-size: 13px;
-  }
-  .status-loaded .file {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-  }
+  .status-empty { color: var(--text-muted); font-size: 14px; padding: 12px 0; }
+  .status-loaded { font-size: 13px; }
+  .status-loaded .file { padding: 10px 0; border-bottom: 1px solid var(--border); }
   .status-loaded .file:last-child { border-bottom: none; }
-  .status-loaded .filename {
-    font-weight: 500;
-    margin-bottom: 4px;
-    word-break: break-all;
-  }
-  .status-loaded .sheets {
-    color: var(--text-muted);
-    font-size: 12px;
-  }
+  .status-loaded .filename { font-weight: 500; margin-bottom: 4px; word-break: break-all; }
+  .status-loaded .sheets { color: var(--text-muted); font-size: 12px; }
 
-  /* ============================================================
-     DROPZONE
-     ============================================================ */
   .dropzone {
     border: 2px dashed var(--border);
     border-radius: var(--radius);
@@ -186,50 +144,53 @@
     border-color: var(--accent);
     background: rgba(15, 118, 110, 0.04);
   }
-  .dropzone-icon {
-    font-size: 32px;
-    margin-bottom: 12px;
-    color: var(--text-muted);
-  }
-  .dropzone-primary {
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-  .dropzone-secondary {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
+  .dropzone-icon { font-size: 32px; margin-bottom: 12px; color: var(--text-muted); }
+  .dropzone-primary { font-weight: 500; margin-bottom: 4px; }
+  .dropzone-secondary { font-size: 13px; color: var(--text-muted); }
   #file-input { display: none; }
 
-  .file-list {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+  .file-list { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
   .file-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 8px 12px;
     font-size: 13px;
   }
+  .file-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .file-item .remove {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    font-size: 18px;
-    padding: 0 4px;
+    background: none; border: none;
+    color: var(--text-muted); cursor: pointer;
+    font-size: 18px; padding: 0 4px;
   }
   .file-item .remove:hover { color: var(--danger); }
+  .file-progress {
+    margin-top: 6px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    display: none;
+  }
+  .file-progress.active { display: block; }
+  .file-progress-bar {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.2s;
+    width: 0%;
+  }
+  .file-progress-bar.done { background: var(--success); }
+  .file-progress-bar.error { background: var(--danger); }
+  .file-status {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
 
-  /* ============================================================
-     BOTONES
-     ============================================================ */
   .btn {
     background: var(--accent);
     color: white;
@@ -249,39 +210,23 @@
     cursor: not-allowed;
   }
   .btn-block { width: 100%; }
+  .actions { display: flex; justify-content: flex-end; margin-top: 16px; }
 
-  .actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 16px;
-  }
-
-  /* ============================================================
-     FEEDBACK
-     ============================================================ */
   .alert {
     padding: 12px 14px;
     border-radius: 8px;
     font-size: 13px;
     margin-bottom: 16px;
   }
-  .alert-error {
-    background: #FEF2F2;
-    border: 1px solid #FECACA;
-    color: #991B1B;
-  }
-  .alert-success {
-    background: #F0FDF4;
-    border: 1px solid #BBF7D0;
-    color: #166534;
-  }
+  .alert-error { background: #FEF2F2; border: 1px solid #FECACA; color: #991B1B; }
+  .alert-success { background: #F0FDF4; border: 1px solid #BBF7D0; color: #166534; }
+  .alert-info { background: #EFF6FF; border: 1px solid #BFDBFE; color: #1E40AF; }
 
   .hidden { display: none !important; }
 
   .spinner {
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: 14px; height: 14px;
     border: 2px solid currentColor;
     border-top-color: transparent;
     border-radius: 50%;
@@ -289,13 +234,8 @@
     vertical-align: middle;
     margin-right: 6px;
   }
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* ============================================================
-     RESPONSIVE
-     ============================================================ */
   @media (max-width: 600px) {
     header { padding: 12px 16px; }
     main { padding: 20px 12px; }
@@ -333,8 +273,6 @@
 
   <!-- PANEL -->
   <div id="panel-view" class="hidden">
-
-    <!-- Estado actual -->
     <div class="section">
       <h2>Reportes cargados actualmente</h2>
       <div id="status-content">
@@ -342,7 +280,6 @@
       </div>
     </div>
 
-    <!-- Subir nuevos -->
     <div class="section">
       <h2>Cargar nuevos reportes</h2>
       <div id="upload-feedback"></div>
@@ -360,25 +297,18 @@
         <button class="btn" id="upload-btn" disabled>Subir y reemplazar reportes</button>
       </div>
     </div>
-
   </div>
 </main>
 
-<script>
-  // ============================================================
-  // CONFIGURACIÓN — La URL base se infiere del dominio donde corre la página.
-  // Si estás abriendo admin.html desde SharePoint, editá API_BASE manualmente.
-  // ============================================================
-  const API_BASE = window.location.origin.includes('vercel.app') || window.location.origin.includes('localhost')
-    ? window.location.origin
-    : 'https://TU-PROYECTO.vercel.app';
+<script type="module">
+  // Importamos el helper client de Vercel Blob desde CDN
+  import { upload } from 'https://esm.sh/@vercel/blob@0.27.0/client';
 
+  const API_BASE = window.location.origin;
   let adminPassword = sessionStorage.getItem('bot-admin-pw') || null;
   let selectedFiles = [];
 
-  // ============================================================
-  // ELEMENTS
-  // ============================================================
+  // Elements
   const $loginView = document.getElementById('login-view');
   const $panelView = document.getElementById('panel-view');
   const $loginForm = document.getElementById('login-form');
@@ -391,9 +321,7 @@
   const $uploadBtn = document.getElementById('upload-btn');
   const $uploadFeedback = document.getElementById('upload-feedback');
 
-  // ============================================================
   // LOGIN
-  // ============================================================
   $loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const pw = $passwordInput.value;
@@ -426,9 +354,7 @@
     $panelView.classList.remove('hidden');
   }
 
-  // ============================================================
   // STATUS
-  // ============================================================
   async function loadStatus() {
     try {
       const res = await fetch(`${API_BASE}/api/admin/status`, {
@@ -439,8 +365,7 @@
         location.reload();
         return;
       }
-      const data = await res.json();
-      renderStatus(data);
+      renderStatus(await res.json());
     } catch (err) {
       $statusContent.innerHTML = `<div class="alert alert-error">Error: ${err.message}</div>`;
     }
@@ -467,11 +392,8 @@
     `;
   }
 
-  // ============================================================
   // DROPZONE
-  // ============================================================
   $dropzone.addEventListener('click', () => $fileInput.click());
-
   $dropzone.addEventListener('dragover', (e) => {
     e.preventDefault();
     $dropzone.classList.add('dragover');
@@ -497,9 +419,13 @@
       return;
     }
     $fileList.innerHTML = selectedFiles.map((f, i) => `
-      <div class="file-item">
-        <span>${escapeHtml(f.name)} · ${(f.size / 1024).toFixed(1)} KB</span>
-        <button class="remove" data-i="${i}" title="Quitar">×</button>
+      <div class="file-item" data-i="${i}">
+        <div class="file-item-header">
+          <span>${escapeHtml(f.name)} · ${(f.size / 1024).toFixed(1)} KB</span>
+          <button class="remove" data-i="${i}" title="Quitar">×</button>
+        </div>
+        <div class="file-progress"><div class="file-progress-bar"></div></div>
+        <div class="file-status"></div>
       </div>
     `).join('');
     $uploadBtn.disabled = false;
@@ -511,23 +437,51 @@
     });
   }
 
-  // ============================================================
-  // UPLOAD
-  // ============================================================
+  function updateFileProgress(idx, percent, status, klass) {
+    const $item = $fileList.querySelector(`.file-item[data-i="${idx}"]`);
+    if (!$item) return;
+    const $bar = $item.querySelector('.file-progress-bar');
+    const $progress = $item.querySelector('.file-progress');
+    const $status = $item.querySelector('.file-status');
+    $progress.classList.add('active');
+    $bar.style.width = `${percent}%`;
+    if (klass) $bar.className = `file-progress-bar ${klass}`;
+    if (status) $status.textContent = status;
+  }
+
+  // UPLOAD (client uploads a Vercel Blob, sin limite de 4.5MB)
   $uploadBtn.addEventListener('click', async () => {
     if (selectedFiles.length === 0) return;
     $uploadBtn.disabled = true;
     $uploadBtn.innerHTML = '<span class="spinner"></span>Subiendo...';
-    $uploadFeedback.innerHTML = '';
+    $uploadFeedback.innerHTML = '<div class="alert alert-info">Subiendo archivos directo al storage...</div>';
 
-    const formData = new FormData();
-    selectedFiles.forEach(f => formData.append('files', f, f.name));
-
+    // Paso 1: Subir cada archivo directo al Blob
     try {
-      const res = await fetch(`${API_BASE}/api/admin/upload`, {
+      for (let i = 0; i < selectedFiles.length; i++) {
+        const file = selectedFiles[i];
+        updateFileProgress(i, 0, 'Subiendo...');
+        try {
+          await upload(`raw/${file.name}`, file, {
+            access: 'public',
+            handleUploadUrl: `${API_BASE}/api/admin/upload`,
+            clientPayload: JSON.stringify({ password: adminPassword }),
+            onUploadProgress: (progress) => {
+              updateFileProgress(i, progress.percentage, `${Math.round(progress.percentage)}%`);
+            }
+          });
+          updateFileProgress(i, 100, 'Subido ✓', 'done');
+        } catch (err) {
+          updateFileProgress(i, 100, `Error: ${err.message}`, 'error');
+          throw err;
+        }
+      }
+
+      // Paso 2: Pedir al backend que consolide todo en reports.json
+      $uploadFeedback.innerHTML = '<div class="alert alert-info"><span class="spinner"></span>Procesando archivos...</div>';
+      const res = await fetch(`${API_BASE}/api/admin/consolidate`, {
         method: 'POST',
-        headers: { 'X-Admin-Password': adminPassword },
-        body: formData
+        headers: { 'X-Admin-Password': adminPassword }
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
@@ -549,18 +503,13 @@
     }
   });
 
-  // ============================================================
-  // UTILS
-  // ============================================================
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, c => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[c]));
   }
 
-  // ============================================================
   // INIT
-  // ============================================================
   if (adminPassword) {
     showPanel();
     loadStatus();
